@@ -1,9 +1,10 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = ""
-
+$db = new PDO('mysql:host=db'; 'dbname=cryptid_database','root','password');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE);
+$query=$db->prepare("SELECT* FROM 'cryptids");
+$query->execute();
+$result = $query->fetchAll();
 
 ?>
 
