@@ -7,10 +7,10 @@
             echo '</h2>';
             echo '<br>';
             echo '<ul>';
-                echo '<li>' . $cryptid["weird_lvl"] . '</li>';
-                echo '<li>' . $cryptid["fear_lvl"] . '</li>';
-                echo '<li>' . $cryptid["size"] . '</li>';
-                echo '<li>' . $cryptid["meal_rating"] . '</li>';
+                echo '<li>' . "Weirdness Level: " . $cryptid["weird_lvl"] . '</li>';
+                echo '<li>' . "Scariness Level: " . $cryptid["fear_lvl"] . '</li>';
+                echo '<li>' . "Size: " . $cryptid["size"] . '</li>';
+                echo '<li>' . "Meal review: " . $cryptid["meal_rating"] . '</li>';
             echo '</ul>';
         };
         echo '</div>';
