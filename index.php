@@ -13,7 +13,6 @@
     </head>
     <body>
         <!--Top Bar-->
-
         <section id="top_bar">
             <div class="container">
                 <h1>Cryptid Collection</h1>
@@ -24,12 +23,10 @@
             </a>
         </section>
         <section id="content">
-
-        <?php
-        $db=fetch_db();
-        list_collection($db);
-        ?>
-        
+            <?php
+            $db=fetch_db();
+            list_collection($db);
+            ?>
         </section>
     </body>
 </html>

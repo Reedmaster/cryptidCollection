@@ -6,15 +6,11 @@ body {
 /* Top Bar */
 
 #top_bar {
-    background-color: #259da8;
+    background-color: #3b6978;
 }
 
 h1 {
     padding: 0;
-}
-
-p {
-    color: #cae8d5;
 }
 
 /* Content Section */
