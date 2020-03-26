@@ -6,11 +6,25 @@ body {
 /* Top Bar */
 
 #top_bar {
-    background-color: #84a9ac;
+    background-color: #259da8;
+}
+
+h1 {
+    padding: 0;
+}
+
+p {
+    color: #cae8d5;
 }
 
 /* Content Section */
 
 #content {
+    background-color: #cae8d5;
+}
+
+/* form section */
+
+#form_container {
     background-color: #cae8d5;
 }

@@ -12,7 +12,7 @@
                 Home
             </a>
         </nav>
-        <main>
+        <section id="form_container">
             <form action="cryptid_upload.php" method="POST" class="userform">
                 <h2>Form</h2>
                 <label>Name:</label>
