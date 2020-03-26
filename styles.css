@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Bar */
+
+#top_bar {
+    background-color: #84a9ac;
+}
+
+/* Content Section */
+
+#content {
+    background-color: #cae8d5;
+}
