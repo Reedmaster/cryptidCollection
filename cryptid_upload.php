@@ -32,10 +32,11 @@
                 $query = $connection->prepare("INSERT INTO cryptids(`name`,`weird_lvl`,`fear_lvl`,`size`,`meal_rating`) VALUES (:name,:weird_lvl,:fear_lvl,:size,:meal_rating)");
                 $query->execute(['name'=>$name, 'weird_lvl'=>$weird_lvl, 'fear_lvl'=>$fear_lvl, 'size'=>$size, 'meal_rating'=>$meal_rating]);
             }
-
+         
             if(isset($_POST['submit']) && inputNotNull()){
                 upload_db();
                 echo "<br/><span>Thank you for your submission</span>";
+                   // update this so it sends the user back to index after a succesful add
             }else {
                 echo "<p> Failed </p>";
             }

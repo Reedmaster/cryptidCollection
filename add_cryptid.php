@@ -1,6 +1,3 @@
-<!-- //requires here -->
-
-<!-- <call functi -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,25 +12,26 @@
                 Home
             </a>
         </nav>
-        <!-- remove the action attrib -->
-        <form action="cryptid_upload.php" method="POST" class="userform">
-            <h2>Form</h2>
-            <label>Name:</label>
-            <input type="text" name="cryptid_name" required>
-            <label>Weird Level:</label>
-            <input type="number" name="cryptid_weird" min="0" max="10" required>
-            <label>Fear Level:</label>
-            <input type="number" name="cryptid_fear" min="0" max="10" required>
-            <label>Size:</label>
-            <input type="number" name="cryptid_size" min="0" max="10" required>
-            <label>Meal Rating:</label>
-            <select name="meal_taste" size="4" multiple>
-                <option value="delicious">Delicious</option>
-                <option value="okay">Okay</option>
-                <option value="disgusting">Disgusting</option>
-                <option value="escaped">It got away</option>
-            </select>
-            <input type="submit" name="submit" class="submit">
-        </form>
+        <main>
+            <form action="cryptid_upload.php" method="POST" class="userform">
+                <h2>Form</h2>
+                <label>Name:</label>
+                <input type="text" name="cryptid_name" required>
+                <label>Weird Level:</label>
+                <input type="number" name="cryptid_weird" min="0" max="10" required>
+                <label>Fear Level:</label>
+                <input type="number" name="cryptid_fear" min="0" max="10" required>
+                <label>Size:</label>
+                <input type="number" name="cryptid_size" min="0" max="10" required>
+                <label>Meal Rating:</label>
+                <select name="meal_taste" size="4" multiple>
+                    <option value="delicious">Delicious</option>
+                    <option value="okay">Okay</option>
+                    <option value="disgusting">Disgusting</option>
+                    <option value="escaped">It got away</option>
+                </select>
+                <input type="submit" name="submit" class="submit">
+            </form>
+        </main> 
     </body>
 </html>
