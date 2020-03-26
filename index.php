@@ -1,13 +1,3 @@
-<?php
-
-require_once('fetch_database.php');
-$db=fetch_db();
-require_once('lister.php');
-$collection=list_collection($db);
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,51 +18,15 @@ $collection=list_collection($db);
                 Add cryptid
             </a>
         </section>
-
-        <!--Content Section-->
-
         <section id="content">
-            <div class="tile">
-                <img src>
-                <ul>
-                    <li>Name: Kraken</li>
-                    <li>Weird level: 7/10</li>
-                    <li>Fear level: 8/10</li>
-                    <li>Size: 9/10</li>
-                    <li>Colour: orange</li>
-                    <li>Drugs taken: hallucinogens</li>
-                </ul>
-                <form method="post" action="deleter.php">
-                    <input hidden name="id" value="1">
-                    <button type="submit">DELETE</button>
-                </form>
-            </div>
-            <div class="tile">
-                <img src>
-                <div class="container">
-                    <ul>
-                        <li>Name: Loch Ness Monster</li>
-                        <li>Weird level: 5/10</li>
-                        <li>Fear level: 3/10</li>
-                        <li>Size: 6/10</li>
-                        <li>Colour: blue</li>
-                        <li>Drugs taken: none</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="tile">
-                <img src>
-                <div class="container">
-                    <ul>
-                        <li>Name: Yeti</li>
-                        <li>Weird level: 4/10</li>
-                        <li>Fear level: 6/10</li>
-                        <li>Size: 4/10</li>
-                        <li>Colour: black</li>
-                        <li>Drugs taken: none</li>
-                    </ul>
-                </div>
-            </div>
+
+        <?php
+        require_once('fetch_database.php');
+        $db=fetch_db();
+        require_once('lister.php');
+        $collection=list_collection($db);
+        ?>
+        
         </section>
     </body>
 </html>
