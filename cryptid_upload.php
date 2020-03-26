@@ -14,22 +14,31 @@
         </nav>
         <section id=upload_div>
             <?php
+
+            function inputNotNull() : bool {
+                return $_POST['cryptid_name'] != '' ||$_POST['cryptid_weird'] != '' ||$_POST['cryptid_fear'] != '' ||$_POST['cryptid_size'] != '' ||$_POST['meal_taste'] != '' ;
+            }
+
+            function upload_db() {
                 $connection = new PDO('mysql:host=db; dbname=cryptid_database','root','password');
                 $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                if(isset($_POST['submit'])){
-                    $name = $_POST['cryptid_name'];
-                    $weird_lvl = $_POST['cryptid_weird'];
-                    $fear_lvl = $_POST['cryptid_fear'];
-                    $size = $_POST['cryptid_size'];
-                    $meal_rating = $_POST['meal_taste'];
-                    if($name !=''||$weird_lvl !=''||$fear_lvl !=''||$size !=''||$meal_rating !=''){
-                        $query = $connection->prepare("INSERT INTO cryptids(`name`,`weird_lvl`,`fear_lvl`,`size`,`meal_rating`) VALUES ('$name','$weird_lvl','$fear_lvl','$size','$meal_rating')");
-                        $query->execute();
-                        echo "<br/><span>Thank you for your submission</span>";
-                    } else {
-                        echo "<p> Failed </p>";
-                    };
-                };
+                
+                $name = $_POST['cryptid_name'];
+                $weird_lvl = $_POST['cryptid_weird'];
+                $fear_lvl = $_POST['cryptid_fear'];
+                $size = $_POST['cryptid_size'];
+                $meal_rating = $_POST['meal_taste'];
+    
+                $query = $connection->prepare("INSERT INTO cryptids(`name`,`weird_lvl`,`fear_lvl`,`size`,`meal_rating`) VALUES (:name,:weird_lvl,:fear_lvl,:size,:meal_rating)");
+                $query->execute(['name'=>$name, 'weird_lvl'=>$weird_lvl, 'fear_lvl'=>$fear_lvl, 'size'=>$size, 'meal_rating'=>$meal_rating]);
+            }
+
+            if(isset($_POST['submit']) && inputNotNull()){
+                upload_db();
+                echo "<br/><span>Thank you for your submission</span>";
+            }else {
+                echo "<p> Failed </p>";
+            }
             ?>
         </section>
     </body>

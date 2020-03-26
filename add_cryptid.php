@@ -1,3 +1,6 @@
+<!-- //requires here -->
+
+<!-- <call functi -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,6 +15,7 @@
                 Home
             </a>
         </nav>
+        <!-- remove the action attrib -->
         <form action="cryptid_upload.php" method="POST" class="userform">
             <h2>Form</h2>
             <label>Name:</label>

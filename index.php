@@ -1,3 +1,8 @@
+<?php
+    require_once('fetch_database.php');
+    require_once('lister.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -21,10 +26,8 @@
         <section id="content">
 
         <?php
-        require_once('fetch_database.php');
         $db=fetch_db();
-        require_once('lister.php');
-        $collection=list_collection($db);
+        list_collection($db);
         ?>
         
         </section>
