@@ -7,5 +7,3 @@
         $result = $query->fetchAll();
         return $result;
     }
-
-?>
